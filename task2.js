@@ -12,5 +12,11 @@ const books = [
     { title: "The Catcher in the Rye", author: "J.D. Salinger", year: 1951 }
 ];
 
-const bookTitles = books.map((book) => (book.title));
-console.log(bookTitles)
+
+function getBookTitles(array) {
+    return array.map(book => book.title);
+}
+
+
+const bookTitles = getBookTitles(books);
+console.log(bookTitles); 
