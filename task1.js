@@ -14,7 +14,14 @@ const peoples = [
 ];
 
 
-const maleNames = peoples.filter((people) => people.gender !== "Female").map((male) => (male.name))
 
+function getMaleNames(array) {
+    return array
+        .filter(person => person.gender !== "Female")
+        .map(person => person.name);
+}
+
+
+const maleNames = getMaleNames(peoples);
 console.log(maleNames);
 /* Final result: [ 'Bob', 'Charlie', 'Ethan', 'George' ] */
